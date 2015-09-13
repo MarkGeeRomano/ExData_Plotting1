@@ -1,7 +1,7 @@
 #plot 3
+url<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(url,destfile ="./test.zip", method="curl" )
 unzip('./test.zip')
-download.file(url,destfile ="./test.zip", method="curl" )
 read.table(pipe('grep "^[1-2]/2/2007" "household_power_consumption.txt"'))
 elecData<-read.table(pipe('grep "^[1-2]/2/2007" "household_power_consumption.txt"'),header=FALSE,sep=';')
 library(plyr)
